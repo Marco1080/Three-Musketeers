@@ -1,0 +1,87 @@
+html, body {
+    height: 98%;
+}
+
+body {
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    height: 15%;
+    align-items: center;
+    font-size: 100px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#logo-inicio {
+    height: 100%;
+}
+
+#cuerpo-cartas {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: 70%;
+    margin-top: 5px;
+}
+
+.carta {
+    height: 100%;
+    margin: 10px;
+    width: 600px;
+    background-color: #848cff;
+    border-radius: 20px;
+    transition: 1s;
+
+}
+
+.texto-carta {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    backface-visibility: hidden;
+    flex-direction: column;
+    height: 100%;
+}
+
+.enlaces {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+    transform: rotateY(180deg);
+	front-face-visibility: hidden;
+	transition: transform 1s;
+}
+
+.enlace-carta {
+    margin: 20px;
+}
+
+.carta:hover {
+    transition: 1s;
+    transform: rotateY(180deg);
+    background-color: #ba84ff;
+}
+
+.carta:hover .enlaces {
+    display: flex;
+    flex-direction: column;
+	position: static;
+	transition: backface-visibility 1s;
+	
+} 
+
+.texto-carta p{
+	backface-visibility: hidden;
+	transition: transform 1s;
+}
+
+.carta:hover p {
+	position: absolute;
+	transform: rotateY(180deg);
+	transition: transform 1s;
+}
