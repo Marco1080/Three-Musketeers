@@ -16,6 +16,10 @@ header {
     padding: 10px;
 }
 
+header img {
+    font-size: xx-small;
+}
+
 #logo-inicio {
     height: 100%;
 }
@@ -39,22 +43,19 @@ header {
 }
 
 .texto-carta {
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     backface-visibility: hidden;
+    display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .enlaces {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
+    display: none;
     transform: rotateY(180deg);
-	front-face-visibility: hidden;
-	transition: transform 1s;
 }
 
 .enlace-carta {
@@ -70,18 +71,10 @@ header {
 .carta:hover .enlaces {
     display: flex;
     flex-direction: column;
-	position: static;
-	transition: backface-visibility 1s;
-	
+    transition:1s;
 } 
 
-.texto-carta p{
-	backface-visibility: hidden;
-	transition: transform 1s;
-}
-
 .carta:hover p {
-	position: absolute;
-	transform: rotateY(180deg);
-	transition: transform 1s;
+    display: none;
+    transition: 1s;
 }
