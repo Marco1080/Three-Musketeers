@@ -1,80 +1,86 @@
-html, body {
-    height: 98%;
+body, html {
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
 }
 
-body {
-    padding: 10px;
+
+#pagina-actual {
+    color: #7751FF;
+    font-weight: bold;
 }
+
 
 header {
+    color: #7751FF;
+    text-align: center;
+    margin: 50px;
+}
+
+.barra-navegable {
     display: flex;
-    height: 15%;
-    align-items: center;
-    font-size: 100px;
-    font-family: sans-serif;
-    border-radius: 10px;
-    padding: 10px;
+    justify-content: space-around;
+    position: sticky;
+    top: 20px;
+    background-color: #FFFFFF;
+    padding: 20px;
 }
 
-header img {
-    font-size: xx-small;
+.barra-navegable a {
+    text-decoration: none;
+    color: black;
 }
 
-#logo-inicio {
-    height: 100%;
-}
-
-#cuerpo-cartas {
+.cuerpo {
     display: flex;
-    align-content: center;
-    justify-content: space-between;
-    height: 70%;
-    margin-top: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .carta {
-    height: 100%;
-    margin: 10px;
-    width: 600px;
-    background-color: #848cff;
-    border-radius: 20px;
-    transition: 1s;
-
-}
-
-.texto-carta {
+    margin: 5%;
+    height: 400px;
+    max-width: 300px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    backface-visibility: hidden;
+    align-items: center;
+    flex-grow: 1;
+    border-radius: 20px;
+    background-color: #A48BFF;
+}
+
+.carta p {
+    margin: 10px;
+}
+
+.carta-imagen {
+    margin: 20px;
+    height: 250px;
+    width: 190px;
+    max-width: 190px;
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border-radius: 20px;
+    background-color: #A48BFF;
 }
 
-.enlaces {
-    display: none;
-    transform: rotateY(180deg);
-}
-
-.enlace-carta {
+#foto-personal {
+    width: 200px;
+    height: 200px;
+    background-image: url(/img/gatito.jpeg);
+    background-position: center;
+    background-size: 300px;
+    border-radius: 50%;
     margin: 20px;
 }
 
-.carta:hover {
-    transition: 1s;
-    transform: rotateY(180deg);
-    background-color: #ba84ff;
+#info-personal {
+    width: 50%;
 }
 
-.carta:hover .enlaces {
-    display: flex;
+#body-sobre-mi {
     flex-direction: column;
-    transition:1s;
-} 
-
-.carta:hover p {
-    display: none;
-    transition: 1s;
+    align-items: center;
 }
