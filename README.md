@@ -1,2 +1,2 @@
 # Three-Musketeers
-Proyecto de un portfolio de arte.
+Vistas de las distintas partes de la pagina.
