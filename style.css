@@ -2,6 +2,7 @@ body, html {
     font-family: sans-serif;
     padding: 0px;
     margin: 0px;
+    
 }
 
 
@@ -24,23 +25,28 @@ header {
     top: 20px;
     background-color: #FFFFFF;
     padding: 20px;
+    z-index: 10;
 }
 
 .barra-navegable a {
     text-decoration: none;
     color: black;
+    text-align: center;
 }
 
 .cuerpo {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 10px;
 }
 
 .carta {
+    position: relative;
     margin: 5%;
     height: 400px;
     max-width: 300px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,9 +57,12 @@ header {
 
 .carta p {
     margin: 10px;
+    text-align: center;
+    z-index: 5;
 }
 
 .carta-imagen {
+    position: relative;
     margin: 20px;
     height: 250px;
     width: 190px;
@@ -69,9 +78,6 @@ header {
 #foto-personal {
     width: 200px;
     height: 200px;
-    background-image: url(/img/gatito.jpeg);
-    background-position: center;
-    background-size: 300px;
     border-radius: 50%;
     margin: 20px;
 }
@@ -83,4 +89,73 @@ header {
 #body-sobre-mi {
     flex-direction: column;
     align-items: center;
+}
+
+#redes-sociales {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.img-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.link-redes-sociales {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+#contacto {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 80%;
+    margin: 40px;
+}
+
+#contacto p {
+    text-align: center;
+    text-justify: distribute;
+}
+
+@media screen and (max-width: 525px) {
+    .barra-navegable {
+        font-size: 10px;
+    }
+
+    .barra-navegable a {
+        margin: 10px;
+    }
+    .carta {
+        height: 150px;
+        width: 250px;
+    }
+
+    .carta-imagen {
+        height: 150px;
+        width: 100px;
+    }
+
+    #info-personal {
+        width: 80%;
+    }
+
+    .link-redes-sociales {
+        width: 75px;
+        height: 75px;
+    }
 }
